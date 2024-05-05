@@ -55,7 +55,7 @@ body {
     border-color: rgb(8, 159, 224);
 }
 
-/* Input buttons */
+
 .signin,
 .signup {
     padding: 0.5rem 1rem;
@@ -73,7 +73,7 @@ body {
     border-color: rgb(8, 159, 224);
 }
 
-/* Hamburger menu button */
+
 .hamburger {
     display: none;
     font-size: 2rem;
@@ -83,38 +83,37 @@ body {
     cursor: pointer;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 610px) {
-    /* Hide the navigation items and input buttons */
+    
     .navbar .list,
     .navbar input {
         display: none;
     }
 
-    /* Show the hamburger menu button */
+
     .hamburger {
         display: block;
         position: absolute;
-        top: 1rem; /* Adjust the top position */
-        left: 1rem; /* Adjust the left position */
+        top: 1rem; 
+        left: 1rem; 
     }
 
-    /* Adjust the position of the logo */
+
     .navbar .logo h1 {
-        margin-left: 40%; /* Adjusted margin for the logo */
+        margin-left: 40%; 
     }
 
-    /* Show the navigation list when the hamburger menu is clicked */
+    
     .navbar .list.show {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: calc(1rem + 3.5rem); /* Adjusted top position */
-        /* left: 1rem; Adjusted left position */
-        background-color: #81a0ff63; /* Background color for the list */
-        border: 0.05em solid #71cdff; /* Border */
-        border-top: none; /* Remove top border */
-        border-radius: 0 0 10px 10px; /* Rounded corners */
-        z-index: 999; /* Ensure it's above other content */
+        top: calc(1rem + 3.5rem);
+        background-color: #81a0ff63; 
+        border: 0.05em solid #71cdff; 
+        border-top: none; 
+        border-radius: 0 0 10px 10px; 
+        z-index: 999; 
     }
 }

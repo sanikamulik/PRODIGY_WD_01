@@ -1,0 +1,120 @@
+/* General styles */
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #d2eaff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 0.05em solid #71cdff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar .logo h1 {
+    font-weight: 600;
+    color: black;
+    margin-left: 8%;
+}
+
+.navbar .logo b {
+    color: rgb(0, 39, 130);
+}
+
+/* Navigation list */
+.navbar .list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 635;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    border-color: rgb(8, 159, 224);
+}
+
+/* Input buttons */
+.signin,
+.signup {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+.signin:hover,
+.signup:hover {
+    border-color: rgb(8, 159, 224);
+}
+
+/* Hamburger menu button */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 610px) {
+    /* Hide the navigation items and input buttons */
+    .navbar .list,
+    .navbar input {
+        display: none;
+    }
+
+    /* Show the hamburger menu button */
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 1rem; /* Adjust the top position */
+        left: 1rem; /* Adjust the left position */
+    }
+
+    /* Adjust the position of the logo */
+    .navbar .logo h1 {
+        margin-left: 40%; /* Adjusted margin for the logo */
+    }
+
+    /* Show the navigation list when the hamburger menu is clicked */
+    .navbar .list.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(1rem + 3.5rem); /* Adjusted top position */
+        /* left: 1rem; Adjusted left position */
+        background-color: #81a0ff63; /* Background color for the list */
+        border: 0.05em solid #71cdff; /* Border */
+        border-top: none; /* Remove top border */
+        border-radius: 0 0 10px 10px; /* Rounded corners */
+        z-index: 999; /* Ensure it's above other content */
+    }
+}
